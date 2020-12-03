@@ -1,0 +1,73 @@
+/*
+  this is how you set variables across your css file
+  see the use of the variables throughout this file
+ */
+ html {
+   --color-hibiscus: #b03060;
+   --color-cinder: #915c45;
+   --size-epsilon: 35px;
+   --close-to-peach-color: #C0523F;
+   --pleasant-green: #A5C639;
+   --barney: #6E44BB;
+   --magenta: #C9368F;
+ }
+
+/* setting the 2nd child of part one, the p tag, to have a color of --barney which was set above */
+ .part-one > p:nth-child(2){
+   color: var(--barney);
+ }
+
+/* setting every 5th child of part one, the p tags, to have a color of --magenta which was sset above */
+ .part-one > p:nth-child(5n+0){
+   color: var(--magenta);
+ }
+
+ /* setting every 1/3 p tag that is a child of the .part-one html element */
+ .part-one > p:nth-last-child(3n+0) {
+   background: var(--color-hibiscus);
+ }
+
+ /* setting every 1/4 p tag that is a child of the .part-one html element */
+ .part-one > p:nth-last-child(4n+0) {
+   background: var(--color-cinder);
+ }
+
+ /* setting the last p tag child of the .part-one html element */
+ .part-one > p:nth-last-child(1) {
+   background: green;
+   font-size: var(--size-epsilon)
+ }
+
+
+
+/* part two */
+/* the last 6 li children in the .last-child-list html element */
+.last-child-list > li:nth-last-child(-n+6) {
+    color: var(--color-hibiscus);
+    font-family: 'Gloria Hallelujah', cursive;
+    margin-left: 0.25em;
+  }
+}
+
+/* all the h2 children of the .nth-last-child element */
+.nth-last-child > h2 {
+  margin-top: 0;
+  color: var(--color-cinder);
+}
+
+/* all the ul children of the .nth-last-child element */
+.nth-last-child > ul {
+  margin-bottom: 0;
+  font-size: var(--size-epsilon);
+  color: var(--color-cinder);
+}
+
+/*
+  the last li child in the .last-child-list html element
+  another way of getting the last child
+*/
+.last-child-list > li:nth-last-child(-n+1) {
+    background-color: var(--close-to-peach-color);
+    color: var(--pleasant-green)
+  }
+}
